@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>title</title>
+	<style>
+		body, html {
+		  height: 100%;
+		  margin: 0;
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+	
+		.bg-image {
+			background: url(malaysia-sabah-borneo-island-scenic-view-545331166-5b0b19dc3037130037b9ca12.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100%;
+			width: 100%;
+		}
+	
+		.grid-container {
+			display: grid;
+			z-index: 2;
+			transform: translate(0, -100%);
+		}
+		#addButton {
+			width: 100%;
+			font-size: 250px;
+			text-align: center;
+			color: white;
+		}
+		#Workedtoday {
+			width: 100%;
+			font-size: 25px;
+			text-align: center;
+			color: white;
+		}
+		#savedTotal {
+			width: 100%;
+			font-size: 120px;
+			text-align: left;
+			color: white;
+			padding-left: 10px;
+		}
+		#savedTotalText {
+			width: 100%;
+			font-size: 25px;
+			text-align: center;
+			padding-bottom: 45px;
+			padding-top: 120px;
+			color: white;
+		}
+    </style>
+  </head>
+  <body>
+	<div class="bg-image"></div>
+    <div class="grid-container">
+	  <div class="grid-item" id="savedTotal">1</div>
+	  <div class="grid-item" id="savedTotalText">Tage an Kreuzfahrt erarbeitet.</div>
+	  <div class="grid-item" id="Workedtoday"></div>
+	  <div class="grid-item" onclick="add()" id="addButton">+</div>
+	</div>
+  </body>
+<script>
+    const date = new Date();
+    var currentDate;
+	var lastSavedDate;
+	var workedToday;
+	var workedTotal;
+	let houresPerDayOfCruise = 22;
+	
+	workedToday = localStorage.getItem('workedToday');
+	workedTotal = localStorage.getItem('workedTotal');
+	
+	currentDate = "" + date.getDate() + date.getMonth() + date.getFullYear();
+	lastSavedDate = localStorage.getItem('lastSavedDate');
+	
+	if (!workedToday) {
+		workedToday = 0;
+	}
+	if (!workedTotal) {
+		workedTotal = 0;
+	}
+	if (!lastSavedDate) {
+		lastSavedDate = currentDate;
+		localStorage.setItem('lastSavedDate', currentDate);
+	}
+	
+	if (lastSavedDate != currentDate){
+		workedToday = 0;
+		localStorage.setItem('lastSavedDate', currentDate);
+	}
+	
+	if (workedTotal > 0) {
+		document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
+	}
+	if (workedToday > 0) {
+		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
+	}
+
+	function add() {
+		workedToday = parseInt(workedToday) + 1;
+		workedTotal = parseInt(workedTotal) + 1;
+		
+		localStorage.setItem('workedToday', workedToday);
+		localStorage.setItem('workedTotal', workedTotal);
+		
+		document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
+		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
+	}
+	
+	function decimalAdjust(type, value, exp) {
+		type = String(type);
+		if (!["round", "floor", "ceil"].includes(type)) {
+		throw new TypeError(
+		  "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+		);
+		}
+		exp = Number(exp);
+		value = Number(value);
+		if (exp % 1 !== 0 || Number.isNaN(value)) {
+		return NaN;
+		} else if (exp === 0) {
+		return Math[type](value);
+		}
+		const [magnitude, exponent = 0] = value.toString().split("e");
+		const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
+		// Shift back
+		const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
+		return Number(`${newMagnitude}e${+newExponent + exp}`);
+	}
+	
+</script>
+</html>
