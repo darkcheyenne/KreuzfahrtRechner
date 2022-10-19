@@ -8,6 +8,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="manifest" href="/manifest.json">
 	<meta name="theme-color" content="#000000">
+	<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
 	<style>
 		body, html {
 		  height: 100%;
@@ -18,8 +19,7 @@
 		  box-sizing: border-box;
 		}
 	
-		.bg-image {
-			background: url(malaysia-sabah-borneo-island-scenic-view-545331166-5b0b19dc3037130037b9ca12.jpg);
+		#bg-image {
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -38,6 +38,12 @@
 			text-align: center;
 			color: white;
 		}
+		#nextDestination {
+			width: 100%;
+			font-size: 25px;
+			text-align: center;
+			color: white;
+		}
 		#Workedtoday {
 			width: 100%;
 			font-size: 25px;
@@ -50,6 +56,7 @@
 			text-align: left;
 			color: white;
 			padding-left: 10px;
+			visibility: hidden;
 		}
 		#savedTotalText {
 			width: 100%;
@@ -58,18 +65,26 @@
 			padding-bottom: 45px;
 			padding-top: 120px;
 			color: white;
+			visibility: hidden;
+		}
+		.ldBar {
+			  margin-left: auto;
+			  margin-right: auto;
 		}
     </style>
   </head>
   <body>
-	<div class="bg-image"></div>
+	<div id="bg-image"></div>
     <div class="grid-container">
 	  <div class="grid-item" id="savedTotal">1</div>
+	  <div id="myItem1" class="ldBar label-center" data-preset="bubble" data-value="0"></div>
 	  <div class="grid-item" id="savedTotalText">Tage an Kreuzfahrt erarbeitet.</div>
+	  <div class="grid-item" id="nextDestination"></div>
 	  <div class="grid-item" id="Workedtoday"></div>
 	  <div class="grid-item" onclick="add()" id="addButton">+</div>
 	</div>
   </body>
+<script type="text/javascript" src="loading-bar.js"></script>
 <script>
     const date = new Date();
     var currentDate;
@@ -77,6 +92,8 @@
 	var workedToday;
 	var workedTotal;
 	let houresPerDayOfCruise = 22;
+	var bar1 = new ldBar("#myItem1");
+	var ziele = ["Hamburg","Seetag","Seetag","Seetag","Lissabon"]
 	
 	workedToday = localStorage.getItem('workedToday');
 	workedTotal = localStorage.getItem('workedTotal');
@@ -100,12 +117,7 @@
 		localStorage.setItem('lastSavedDate', currentDate);
 	}
 	
-	if (workedTotal > 0) {
-		document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
-	}
-	if (workedToday > 0) {
-		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
-	}
+	updateText();
 
 	function add() {
 		workedToday = parseInt(workedToday) + 1;
@@ -114,8 +126,26 @@
 		localStorage.setItem('workedToday', workedToday);
 		localStorage.setItem('workedTotal', workedTotal);
 		
-		document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
-		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
+		updateText();
+	}
+	
+	function updateText(){
+		if (workedTotal > 0) {
+			document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
+		} else {
+			document.getElementById("savedTotal").innerHTML  = "0";
+		}
+		if (workedToday > 0) {
+			document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
+		} else {
+			document.getElementById("Workedtoday").innerHTML = "Heute noch nichts erfasst";
+		}
+		
+		document.getElementById("nextDestination").innerHTML = "Nächstes Ziel: " + ziele[Math.floor(workedTotal/houresPerDayOfCruise)]
+		
+		document.getElementById("bg-image").style.backgroundImage = "url('ziele/" + (Math.floor(workedTotal/houresPerDayOfCruise)+1) + ".jpg')";
+		
+		bar1.set(100/22*(workedTotal % houresPerDayOfCruise));
 	}
 	
 	function decimalAdjust(type, value, exp) {
