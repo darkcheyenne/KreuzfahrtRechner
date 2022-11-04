@@ -38,17 +38,24 @@
 			text-align: center;
 			color: white;
 		}
+		#TextBg {
+			background: white;
+			opacity: 0.8;
+			border-radius: 15px;
+			padding: 5px;
+			margin: 10px;
+		}
 		#nextDestination {
 			width: 100%;
 			font-size: 25px;
 			text-align: center;
-			color: white;
+			color: blue;
 		}
 		#Workedtoday {
 			width: 100%;
 			font-size: 25px;
 			text-align: center;
-			color: white;
+			color: blue;
 		}
 		#savedTotal {
 			width: 100%;
@@ -80,8 +87,10 @@
 	  <div class="grid-item" id="savedTotal">1</div>
 	  <div id="myItem1" class="ldBar label-center" data-preset="bubble" data-value="0"></div>
 	  <div class="grid-item" id="savedTotalText">Tage an Kreuzfahrt erarbeitet.</div>
-	  <div class="grid-item" id="nextDestination"></div>
-	  <div class="grid-item" id="Workedtoday"></div>
+	  <div id="TextBg">
+		<div class="grid-item" id="nextDestination"></div>
+		<div class="grid-item" id="Workedtoday"></div>
+	  </div>
 	  <div class="grid-item" onclick="add()" id="addButton">+</div>
 	</div>
   </body>
@@ -94,7 +103,7 @@
 	var workedTotal;
 	let houresPerDayOfCruise = 20.8;
 	var bar1 = new ldBar("#myItem1");
-	var ziele = ["Hamburg","Seetag","Seetag","Seetag","Lissabon","Seetag","Funchal"]
+	var ziele = ["Hamburg","Seetag","Seetag","Seetag","Lissabon","Seetag","Funchal","Seetag","Seetag","Seetag","Seetag","Seetag","Seetag","Bridgetown"]
 	
 	workedToday = localStorage.getItem('workedToday');
 	workedTotal = localStorage.getItem('workedTotal');
