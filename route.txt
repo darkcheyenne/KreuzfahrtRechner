@@ -1,0 +1,469 @@
+Route
+Tag 	Reisestation 	Ankunft 	Abfahrt 	Infos
+1. 	
+Hamburg (Deutschland)
+Einschiffung von ca. 15:00 - 17:00 Uhr
+Ausflugtipps (4)
+		18:00 	
+2. 	
+Seetag
+			
+3. 	
+Seetag
+			
+4. 	
+Seetag
+			
+5. 	
+Lissabon (Portugal)
+	09:00 	19:00 	
+6. 	
+Seetag
+			
+7. 	
+Funchal (Madeira, Portugal)
+Ausflugtipps (5)
+	07:00 	17:00 	
+8. 	
+Seetag
+			
+9. 	
+Seetag
+			
+10. 	
+Seetag
+			
+11. 	
+Seetag
+			
+12. 	
+Seetag
+			
+13. 	
+Seetag
+			
+14. 	
+Bridgetown (Barbados)
+Ausflugtipps (5)
+	08:00 	20:00 	
+15. 	
+St. George's (Grenada)
+	08:00 	20:00 	
+16. 	
+Seetag
+			
+17. 	
+Oranjestad (Aruba)
+Ausflugtipps (3)
+	08:00 	23:00 	
+18. 	
+Willemstad (Curacao)
+Ausflugtipps (4)
+	07:00 	15:00 	
+19. 	
+Santa Marta (Kolumbien)
+	12:00 	21:00 	
+20. 	
+Cartagena (Kolumbien)
+Ausflugtipps (5)
+	07:00 	19:00 	
+21. 	
+San Blas Inseln (Panama)
+	10:00 	17:00 	
+22. 	
+Puerto Limón (Costa Rica)
+Ausflugtipps (3)
+	08:00 		
+23. 	
+Puerto Limón (Costa Rica)
+Ausflugtipps (3)
+		17:00 	
+24. 	
+Cristobal / Colón (Panama)
+	08:00 		
+25. 	
+Cristobal / Colón (Panama)
+		22:00 	
+26. 	
+Seetag
+			
+27. 	
+Seetag
+			
+28. 	
+Puerto Quepos (Costa Rica)
+	07:00 	13:00 	
+	
+Puntarenas (Costa Rica)
+	18:00 		
+29. 	
+Puntarenas (Costa Rica)
+		19:00 	
+30. 	
+San Juan del Sur (Nicaragua)
+	08:00 	17:00 	
+31. 	
+Seetag
+			
+32. 	
+Huatulco (Oaxaca, Mexiko)
+	12:00 	18:00 	
+33. 	
+Acapulco (Guerrero, Mexiko)
+	12:00 	23:00 	
+34. 	
+Seetag
+			
+35. 	
+Puerto Vallarta (Jalisco, Mexiko)
+	07:00 	13:00 	
+36. 	
+Cabo San Lucas (Baja California Sur, Mexiko)
+	08:00 	14:00 	
+37. 	
+Seetag
+			
+38. 	
+San Diego (Kalifornien, USA)
+Ausflugtipps (3)
+	14:00 		
+39. 	
+San Diego (Kalifornien, USA)
+Ausflugtipps (3)
+		23:00 	
+40. 	
+Seetag
+			
+41. 	
+San Francisco (Kalifornien, USA)
+Ausflugtipps (3)
+	09:00 		
+42. 	
+San Francisco (Kalifornien, USA)
+Ausflugtipps (3)
+			
+43. 	
+San Francisco (Kalifornien, USA)
+Ausflugtipps (3)
+		20:00 	
+44. 	
+Seetag
+			
+45. 	
+Seetag
+			
+46. 	
+Seetag
+			
+47. 	
+Seetag
+			
+48. 	
+Seetag
+			
+49. 	
+Hilo (Hawaii, Hawaii, USA)
+	07:00 	18:00 	
+50. 	
+Kahului (Maui, Hawaii, USA)
+	08:00 	19:00 	
+51. 	
+Honolulu (Oahu, Hawaii, USA)
+	08:00 	23:00 	
+52. 	
+Seetag
+			
+53. 	
+Nawiliwili (Kauai, Hawaii, USA)
+	07:00 	17:00 	
+54. 	
+Seetag
+			
+55. 	
+Seetag
+			
+56. 	
+Seetag
+			
+57. 	
+Seetag
+			
+58. 	
+Seetag
+			
+59. 	
+Majuro (Marshallinseln)
+	08:00 	19:00 	
+60. 	
+Seetag
+			
+61. 	
+Seetag
+			
+62. 	
+Seetag
+			
+63. 	
+Chuuk (Mikronesien)
+	08:00 	18:00 	
+64. 	
+Seetag
+			
+65. 	
+Apra Harbor (Guam)
+	08:00 	21:00 	
+66. 	
+Saipan (Nördliche Marianen)
+	08:00 	18:00 	
+67. 	
+Seetag
+			
+68. 	
+Seetag
+			
+69. 	
+Seetag
+			
+70. 	
+Shimizu
+	08:00 	20:00 	
+71. 	
+Yokohama (Japan)
+	08:00 		
+72. 	
+Yokohama (Japan)
+			
+73. 	
+Yokohama (Japan)
+		17:00 	
+74. 	
+Nagoya (Japan)
+	09:00 	18:00 	
+75. 	
+Kobe (Japan)
+	12:00 		
+76. 	
+Kobe (Japan)
+		20:00 	
+77. 	
+Kochi (Shikoku, Japan)
+	08:00 	20:00 	
+78. 	
+Beppu (Oita, Japan)
+	08:00 	20:00 	
+79. 	
+Hakatu-Ku (Japan)
+	08:00 	17:00 	
+80. 	
+Seetag
+			
+81. 	
+Dalian (China)
+	07:00 	18:00 	
+82. 	
+Tianjin Xingang - Peking (China)
+	08:00 		
+83. 	
+Tianjin Xingang - Peking (China)
+		20:00 	
+84. 	
+Seetag
+			
+85. 	
+Qingdao (China)
+	07:00 	18:00 	
+86. 	
+Seetag
+			
+87. 	
+Shanghai (China)
+	08:00 		
+88. 	
+Shanghai (China)
+		16:00 	
+89. 	
+Seetag
+			
+90. 	
+Naha (Okinawa, Japan)
+	07:00 	17:00 	
+91. 	
+Keelung / Taipeh (Taiwan)
+	14:00 		
+92. 	
+Keelung / Taipeh (Taiwan)
+		20:00 	
+93. 	
+Ishigaki (Japan)
+	08:00 	15:00 	
+94. 	
+Seetag
+			
+95. 	
+Hongkong (China)
+	08:00 		
+96. 	
+Hongkong (China)
+			
+97. 	
+Hongkong (China)
+		18:00 	
+98. 	
+Seetag
+			
+99. 	
+Da Nang (Vietnam)
+Ausflugtipps (3)
+	07:00 	18:00 	
+100. 	
+Seetag
+			
+101. 	
+Phu My / Ho-Chi-Minh-Stadt (Vietnam)
+	07:00 	20:00 	
+102. 	
+Seetag
+			
+103. 	
+Tioman (Malaysia)
+	08:00 	17:00 	
+104. 	
+Singapur (Singapur)
+Ausflugtipps (2)
+	07:00 		
+105. 	
+Singapur (Singapur)
+Ausflugtipps (2)
+		14:00 	
+106. 	
+Port Kelang (Malaysia)
+	07:00 	17:00 	
+107. 	
+Ko Phi Phi (Thailand)
+	13:00 	23:00 	
+108. 	
+Phuket (Thailand)
+Ausflugtipps (3)
+	07:00 	17:00 	
+109. 	
+Seetag
+			
+110. 	
+Seetag
+			
+111. 	
+Hambantota (Sri Lanka)
+	10:00 	22:00 	
+112. 	
+Colombo (Sri Lanka)
+	07:00 	23:00 	
+113. 	
+Seetag
+			
+114. 	
+Male (Malediven)
+	07:00 	18:00 	
+115. 	
+Seetag
+			
+116. 	
+Seetag
+			
+117. 	
+Seetag
+			
+118. 	
+Maskat / Muscat (Oman)
+Ausflugtipps (3)
+	13:00 		
+119. 	
+Maskat / Muscat (Oman)
+Ausflugtipps (3)
+		14:00 	
+120. 	
+Dubai (VAE)
+Ausflugtipps (5)
+	12:00 		
+121. 	
+Dubai (VAE)
+Ausflugtipps (5)
+			
+122. 	
+Dubai (VAE)
+Ausflugtipps (5)
+		23:00 	
+123. 	
+Abu Dhabi (VAE)
+Ausflugtipps (7)
+	08:00 	23:00 	
+124. 	
+Sir Bani Yas (VAE)
+	12:00 	20:00 	
+125. 	
+Doha (Katar)
+	07:00 	18:00 	
+126. 	
+Mina Khalifa / Manama (Bahrain)
+Ausflugtipps (5)
+	07:00 	18:00 	
+127. 	
+Seetag
+			
+128. 	
+Maskat / Muscat (Oman)
+Ausflugtipps (3)
+	08:00 	18:00 	
+129. 	
+Seetag
+			
+130. 	
+Salalah (Oman)
+Ausflugtipps (3)
+	12:00 	18:00 	
+131. 	
+Seetag
+			
+132. 	
+Seetag
+			
+133. 	
+Seetag
+			
+134. 	
+Seetag
+			
+135. 	
+Hurghada (Ägypten)
+	08:00 	19:00 	
+136. 	
+Aqaba (Jordanien)
+Ausflugtipps (3)
+	08:00 	23:00 	
+137. 	
+Elat (Israel)
+	06:00 	20:00 	
+138. 	
+Sharm El Sheikh (Ägypten)
+	07:00 	12:00 	
+139. 	
+Suezkanal (Ägypten)
+			
+140. 	
+Seetag
+			
+141. 	
+Seetag
+			
+142. 	
+Giardini Naxos (Sizilien, Italien)
+Ausflugtipps (3)
+	08:00 	19:00 	
+	
+Straße von Messina (Italien)
+			
+143. 	
+Seetag
+			
+144. 	
+Savona (Italien)
+Ausflugtipps (3) 
