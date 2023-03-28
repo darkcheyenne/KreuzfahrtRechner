@@ -74,7 +74,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}, darkcheyenne/kreuzfahrtrechner:v1.0.0
+          tags: ${{ steps.meta.outputs.tags }}, ghcr.io/darkcheyenne/kreuzfahrtrechner:v1.0.0
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
