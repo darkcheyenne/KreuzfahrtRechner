@@ -18,6 +18,7 @@ env:
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
+  VERSION: v16
 
 
 jobs:
@@ -34,6 +35,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "vXXXXXXX"
+          replace: ${{ env.VERSION }}
+          include: "service-worker.js" # Will match all README.md files in any nested directory
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -74,7 +82,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}, ghcr.io/darkcheyenne/kreuzfahrtrechner:v1.0.0
+          tags: ${{ steps.meta.outputs.tags }}, ghcr.io/darkcheyenne/kreuzfahrtrechner:${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max

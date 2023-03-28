@@ -5,7 +5,7 @@
  * e.g. Vite or Next.js would hash the files so the name is unique based on content
  * (style-XYZ123.css etc)
  */
-const CACHE_NAME = "mpwa-cache-v15";
+const CACHE_NAME = "mpwa-cache-vXXXXXXX";
 const urlsToCache = [
   "/",
   "/assets/style.css",
