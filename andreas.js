@@ -6,7 +6,7 @@ var workedTotal;
 let houresPerDayOfCruise = 20.8;
 var bar1 = new ldBar("#myItem1");
 // https://www.e-hoi.ch/kreuzfahrten-weltreise/80561/artania-phoenix-reisen-genua-italien-hamburg-deutschland.html?source=search#route
-var ziele = ["Hamburg", "Seetag", "Seetag", "Seetag", "Lissabon", "Seetag", "Funchal", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Bridgetown", "St. George", "Seetag", "Oranjestad", "Willemstad", "Santa Marta", "Cartagena", "San Blas Inseln", "Puerto Limón", "Puerto Limón", "Cristobal / Colón", "Cristobal / Colón", "Panamal Kanal", "Panamal Kanal", "Puerto Quepos", "Puntarenas","San Juan del Sur", "Seetag", "Huatulco","Acapulco","Seetag","Puerto Vallarta","Cabo San Lucas","Seetag","San Diego","San Diego","Seetag","San Francisco","San Francisco","San Francisco","Seetag","Seetag","Seetag","Seetag","Seetag","Hilo","Kahului"]
+var ziele = ["Hamburg", "Seetag", "Seetag", "Seetag", "Lissabon", "Seetag", "Funchal", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Bridgetown", "St. George", "Seetag", "Oranjestad", "Willemstad", "Santa Marta", "Cartagena", "San Blas Inseln", "Puerto Limón", "Puerto Limón", "Cristobal / Colón", "Cristobal / Colón", "Panamal Kanal", "Panamal Kanal", "Puerto Quepos", "Puntarenas","San Juan del Sur", "Seetag", "Huatulco","Acapulco","Seetag","Puerto Vallarta","Cabo San Lucas","Seetag","San Diego","San Diego","Seetag","San Francisco","San Francisco","San Francisco","Seetag","Seetag","Seetag","Seetag","Seetag","Hilo","Kahului","Honolulu","Seetag","Nawiliwili"]
 
 workedToday = localStorage.getItem('workedToday');
 workedTotal = localStorage.getItem('workedTotal');
