@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
    <head>
-      <script src="newrelic.js"></script> 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <title>Kreuzfahrt Rechner</title>
@@ -15,14 +14,20 @@
    <body>
       <div id="bg-image"></div>
       <div class="grid-container">
-         <div class="grid-item" id="savedTotal">1</div>
          <div id="myItem1" class="ldBar label-center" data-preset="bubble" data-value="0"></div>
-         <div class="grid-item" id="savedTotalText">Tage an Kreuzfahrt erarbeitet.</div>
          <div id="TextBg">
             <div class="grid-item" id="nextDestination"></div>
             <div class="grid-item" id="Workedtoday"></div>
          </div>
          <div class="grid-item" onclick="add()" id="addButton">+</div>
+         <div class="grid-item" id="investipanzi" style="display: none">
+            <img src="dollar.gif" alt="" class="cruise-menu-item" >
+         </div>
+         <div class="grid-item" id="investipanzi2" style="display: none"></div>
+         <div class="grid-item" id="menu">
+            <img src="cruise-ship.png" alt="" class="cruise-menu-item" onclick="menuClickCruise()">
+            <img src="turtle.png" alt="" class="cruise-menu-item" onclick="menuClickTurtle()">
+         </div>
       </div>
    </body>
    <script type="text/javascript" src="loading-bar.js"></script>

@@ -43,11 +43,6 @@ function add() {
 }
 
 function updateText() {
-	if (workedTotal > 0) {
-		document.getElementById("savedTotal").innerHTML = (workedTotal / houresPerDayOfCruise).toFixed(2);
-	} else {
-		document.getElementById("savedTotal").innerHTML = "0";
-	}
 	if (workedToday > 0) {
 		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
 	} else {
@@ -59,6 +54,27 @@ function updateText() {
 	document.getElementById("bg-image").style.backgroundImage = "url('ziele/" + (Math.floor(workedTotal / houresPerDayOfCruise) + 1) + ".jpg')";
 
 	bar1.set(100 / 22 * (workedTotal % houresPerDayOfCruise));
+}
+
+function menuClickTurtle() {
+	document.getElementById("myItem1").style.display = "none";
+	document.getElementById("nextDestination").style.display = "none";
+	document.getElementById("Workedtoday").style.display = "none";
+	document.getElementById("addButton").style.display = "none";
+	document.getElementById("investipanzi").style.display = "block";
+	document.getElementById("investipanzi2").style.display = "block";
+	document.getElementById("bg-image").style.backgroundImage = null;
+	document.getElementById("investipanzi2").innerHTML = "Investipanzi bekommt aus der Arbeit von heute <b><u>jeden Monat</u></b> <br/><br/>" + Math.round(workedToday * 23 * 0.05 / 12 ) +" CHF und " + (workedToday * 23 *0.05 / 12 ).toString().split(".")[1].substring(0,2) + " Rappen";
+}
+
+function menuClickCruise() {
+	document.getElementById("myItem1").style.display = "block";
+	document.getElementById("nextDestination").style.display = "block";
+	document.getElementById("Workedtoday").style.display = "block";
+	document.getElementById("addButton").style.display = "block";
+	document.getElementById("investipanzi").style.display = "none";
+	document.getElementById("investipanzi2").style.display = "none";
+	updateText();
 }
 
 function decimalAdjust(type, value, exp) {
