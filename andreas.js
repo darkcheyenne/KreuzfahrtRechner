@@ -3,6 +3,7 @@ var currentDate;
 var lastSavedDate;
 var workedToday;
 var workedTotal;
+var aebtag;
 let houresPerDayOfCruise = 20.8;
 var bar1 = new ldBar("#myItem1");
 // https://www.e-hoi.ch/kreuzfahrten-weltreise/80561/artania-phoenix-reisen-genua-italien-hamburg-deutschland.html?source=search#route
@@ -43,7 +44,7 @@ function add() {
 }
 
 function updateText() {
-	var aebtag = Math.floor(workedTotal / houresPerDayOfCruise);
+	aebtag = Math.floor(workedTotal / houresPerDayOfCruise);
 	
 	if (workedToday > 0) {
 		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
@@ -113,11 +114,16 @@ function menuClickRoutenkarte() {
 	document.getElementById("meinGridContainer").style.transform = "none";
 	
 	let list = document.getElementById("myList");
+    list.innerHTML = "";
+    var zaehler = 1;
             
         ziele.forEach((item) => {
             let li = document.createElement("li");
-            li.innerText = item;
-            list.appendChild(li);
+            li.innerText = zaehler + " " + item;
+            zaehler = zaehler + 1;
+            if (zaehler < (aebtag + 3)){
+            	list.appendChild(li);
+            }
         });
 }
 
