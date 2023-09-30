@@ -6,7 +6,7 @@ var workedTotal;
 let houresPerDayOfCruise = 20.8;
 var bar1 = new ldBar("#myItem1");
 // https://www.e-hoi.ch/kreuzfahrten-weltreise/80561/artania-phoenix-reisen-genua-italien-hamburg-deutschland.html?source=search#route
-var ziele = ["Hamburg", "Seetag", "Seetag", "Seetag", "Lissabon", "Seetag", "Funchal", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Bridgetown", "St. George", "Seetag", "Oranjestad", "Willemstad", "Santa Marta", "Cartagena", "San Blas Inseln", "Puerto Limón", "Puerto Limón", "Cristobal / Colón", "Cristobal / Colón", "Panamal Kanal", "Panamal Kanal", "Puerto Quepos", "Puntarenas","San Juan del Sur", "Seetag", "Huatulco","Acapulco","Seetag","Puerto Vallarta","Cabo San Lucas","Seetag","San Diego","San Diego","Seetag","San Francisco","San Francisco","San Francisco","Seetag","Seetag","Seetag","Seetag","Seetag","Hilo","Kahului","Honolulu","Seetag","Nawiliwili","Seetag","Seetag","Seetag","Seetag","Seetag","Majuro"]
+var ziele = ["Hamburg", "Seetag", "Seetag", "Seetag", "Lissabon", "Seetag", "Funchal", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Seetag", "Bridgetown", "St. George", "Seetag", "Oranjestad", "Willemstad", "Santa Marta", "Cartagena", "San Blas Inseln", "Puerto Limón", "Puerto Limón", "Cristobal / Colón", "Cristobal / Colón", "Panamal Kanal", "Panamal Kanal", "Puerto Quepos", "Puntarenas","San Juan del Sur", "Seetag", "Huatulco","Acapulco","Seetag","Puerto Vallarta","Cabo San Lucas","Seetag","San Diego","San Diego","Seetag","San Francisco","San Francisco","San Francisco","Seetag","Seetag","Seetag","Seetag","Seetag","Hilo","Kahului","Honolulu","Seetag","Nawiliwili","Seetag","Seetag","Seetag","Seetag","Seetag","Majuro","Seetag 1/3","Seetag 2/3","Seetag 3/3","Chuuk","Seetag","Apra Harbor"]
 
 workedToday = localStorage.getItem('workedToday');
 workedTotal = localStorage.getItem('workedTotal');
@@ -43,15 +43,26 @@ function add() {
 }
 
 function updateText() {
+	var aebtag = Math.floor(workedTotal / houresPerDayOfCruise);
+	
 	if (workedToday > 0) {
 		document.getElementById("Workedtoday").innerHTML = "Heute " + workedToday + " Stunden gearbeitet";
 	} else {
 		document.getElementById("Workedtoday").innerHTML = "Heute noch nichts erfasst";
 	}
 
-	document.getElementById("nextDestination").innerHTML = "Nächstes Ziel: " + ziele[Math.floor(workedTotal / houresPerDayOfCruise)]
+	document.getElementById("nextDestination").innerHTML = "Nächstes Ziel: " + ziele[aebtag]
 
-	document.getElementById("bg-image").style.backgroundImage = "url('ziele/" + (Math.floor(workedTotal / houresPerDayOfCruise) + 1) + ".jpg')";
+	document.getElementById("bg-image").style.backgroundImage = "url('ziele/" + (aebtag + 1) + ".jpg')";
+	
+	if (aebtag == 59 || aebtag == 60 || aebtag == 61 ){
+		document.getElementById("bg-image").style.display = "none";
+		document.getElementById("bg-video").style.display = "block";
+	} else {
+		document.getElementById("bg-image").style.display = "block";
+		document.getElementById("bg-video").style.display = "none";
+	}
+	
 
 	bar1.set(100 / 22 * (workedTotal % houresPerDayOfCruise));
 }
