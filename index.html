@@ -13,11 +13,11 @@
    </head>
    <body>
       <div id="bg-image"></div>
-      <video id="bg-video" playsinline autoplay muted loop poster="cake.jpg">
+      <!-- <video id="bg-video" playsinline autoplay muted loop poster="cake.jpg">
             <source src="ziele/60.mp4" type="video/mp4">
             Your browser does not support the video tag.
-      </video>
-      <div class="grid-container">
+      </video> -->
+      <div class="grid-container" id="meinGridContainer">
          <div id="myItem1" class="ldBar label-center" data-preset="bubble" data-value="0"></div>
          <div id="TextBg">
             <div class="grid-item" id="nextDestination"></div>
@@ -27,9 +27,13 @@
          <div class="grid-item" id="investipanzi" style="display: none">
             <img src="dollar.gif" alt="" class="cruise-menu-item" >
          </div>
+         <div class="grid-item" id="routenkarte" style="display: none">
+            <ul id="myList"></ul>
+         </div>
          <div class="grid-item" id="investipanzi2" style="display: none"></div>
          <div class="grid-item" id="menu">
             <img src="cruise-ship.png" alt="" class="cruise-menu-item" onclick="menuClickCruise()">
+            <img src="treasure-map.png" alt="" class="cruise-menu-item" onclick="menuClickRoutenkarte()">
             <img src="turtle.png" alt="" class="cruise-menu-item" onclick="menuClickTurtle()">
          </div>
       </div>
