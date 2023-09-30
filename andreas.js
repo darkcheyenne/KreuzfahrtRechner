@@ -58,6 +58,8 @@ function updateText() {
 	if (aebtag == 59 || aebtag == 60 || aebtag == 61 ){
 		document.getElementById("bg-image").style.display = "none";
 		document.getElementById("bg-video").style.display = "block";
+		document.getElementById("nextDestination").style.color = "white";
+		document.getElementById("Workedtoday").style.color = "white";
 	} else {
 		document.getElementById("bg-image").style.display = "block";
 		document.getElementById("bg-video").style.display = "none";
